@@ -1,6 +1,6 @@
 ## ICTer Workshop – Sinhala & Tamil Corpora for Transformers
 
-This repository collects large Sinhala **and** Tamil text corpora (see the `Data/` directory) for transformer-based NLP experiments and tutorials (e.g. BERT, mBERT, XLM-R, encoder–decoder architectures).
+This repository collects large Sinhala **and** Tamil text corpora (see the `Data/` directory) and a set of teaching notebooks used in an ICTer workshop on **demystifying the GPT core** and **building a transformer-style language model from scratch**.
 
 ### Repository contents
 
@@ -60,15 +60,32 @@ for lang_file in ["Data/sinhala_phrases.txt", "Data/tamil_phrases_filtered.txt"]
 
 You can then wrap this in a PyTorch `Dataset`, a Hugging Face `datasets` loader, or any other framework of your choice.
 
-### Suggested project structure (for future code)
+### Workshop notebooks – demystifying GPT and transformers
 
-If you extend this repo during the workshop, a simple structure might be:
+All workshop material lives under the `Notebooks/` directory.
 
-- **`notebooks/`** – Exploratory notebooks for tokenization, training, and evaluation.
-- **`src/`** – Reusable Python modules (data loading, model definitions, training loops).
-- **`scripts/`** – Command-line entry points for training and inference.
+- **Data preparation (`Notebooks/Data Preparation/`)**
+  - **`ICTer_Sinhala_Data_Prep.ipynb`**: Uses the `sinhala-nlp/Sinhala-Corpus` dataset from Hugging Face to stream, filter, and export Sinhala text for language modeling.
+  - **`ICTer_Tamil_Data_Prep.ipynb`**: Uses the `aitamilnadu/tamil_stories` dataset from Hugging Face to build a Tamil corpus, including basic cleaning and export.
+- **GPT-from-scratch training (`Notebooks/Atto-GPT-Training/`)**
+  - **`Sinhala_gpt_dev.ipynb`**: A step-by-step, Karpathy-inspired “Building a GPT” notebook that:
+    - Downloads Sinhala raw text.
+    - Explores the character vocabulary.
+    - Builds a tiny GPT-style character-level language model in PyTorch.
+    - Trains and samples text, illustrating how the GPT core works on Sinhala.
+  - **`Tamil_gpt_dev.ipynb`**: The Tamil counterpart of the above, training a tiny GPT-style model on Tamil stories.
+- **Pretrained tiny models (restricted)**
+  - Under `Notebooks/DO NOT TOUCH/I SAID DON'T/LEAVE/RESTRICTED/Pico-GPT Training/` you will find:
+    - Example development notebooks (`Sinhala_1_8m_gpt_dev.ipynb`, `Tamil_1_8m_gpt_dev.ipynb`).
+    - Saved model weights (`sinhala_model_weights.pth`, `tamil_model_weights.pth`) for small trained models.
+  - These are **reference artifacts** and are not intended to be edited during the workshop.
 
-This is only a suggestion; feel free to adapt it to your workflow.
+Together, these notebooks are designed to walk participants from:
+
+1. **Raw Sinhala/Tamil text** → cleaned corpora suitable for modeling.  
+2. **Token/character exploration** → understanding vocabularies and sequence encoding.  
+3. **Implementing a tiny GPT core in PyTorch** → self-attention blocks, residual connections, and training loops.  
+4. **Training & sampling** → generating Sinhala and Tamil text to see the model’s behavior.
 
 ### License and usage
 
