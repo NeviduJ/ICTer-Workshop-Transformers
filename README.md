@@ -50,6 +50,15 @@ These assets are **read-only during the workshop**—they exist so you can poke 
 - **Follow the cells** to implement, train, and sample from tiny GPT-style models for Sinhala and Tamil.  
 - Optionally, **explore the Pico-GPT notebooks and weights** to see how a slightly larger mini GPT behaves on the same languages.
 
+### Credits and acknowledgments
+
+The GPT implementation and training approach in this workshop is inspired by and adapted from **Andrej Karpathy's "Zero to Hero" series**:
+
+- **"Let's build GPT: from scratch, in code, spelled out"** – [karpathy.ai/zero-to-hero](https://karpathy.ai/zero-to-hero.html)
+- The notebooks follow Karpathy's pedagogical style of building a GPT-style transformer from scratch, step by step, with clear explanations of each component.
+
+This workshop adapts those concepts to train tiny GPT models on **Sinhala and Tamil** text, making the transformer architecture accessible to participants working with these languages.
+
 ### License and usage
 
 Please ensure that any downstream use of this corpus complies with the original data source licenses and with your institutional or workshop guidelines. If you plan to redistribute models trained on this corpus, clearly document data provenance and any preprocessing steps you applied.
