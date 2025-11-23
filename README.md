@@ -1,15 +1,15 @@
-## ICTer Workshop – Sinhala & Tamil Mini GPT Models (Atto-GPT & Pico-GPT)
+## ICTer Workshop – Sinhala & Tamil Mini GPT Implementations (Atto-GPT & Pico-GPT)
 
 This repository accompanies an ICTer workshop focused on **demystifying the GPT core** and **building tiny transformer-style language models from scratch** for Sinhala and Tamil.
 
-The emphasis is on understanding how GPT-like models work internally by training **very small, inspectable models**:
+The emphasis is on understanding how GPT-like models work internally by building **very small, inspectable implementations**:
 
-- **Atto-GPT**: character-level GPT-style models trained live during the workshop on Sinhala and Tamil.  
-- **Pico-GPT**: slightly larger, pre-trained reference models whose weights and training notebooks are provided for inspection.
+- **Atto-GPT**: character-level GPT-style implementations built live during the workshop on Sinhala and Tamil.  
+- **Pico-GPT**: slightly larger, pre-trained reference implementations whose weights and training notebooks are provided for inspection.
 
-Any text files in `Data/` are simply raw material to feed these models and are **not** the focus of the workshop.
+Any text files in `Data/` are simply raw material to feed these implementations and are **not** the focus of the workshop.
 
-### Atto-GPT – models we build live
+### Atto-GPT – implementations we build live
 
 The **Atto-GPT** notebooks live in `Notebooks/Atto-GPT-Training/`:
 
@@ -27,7 +27,7 @@ In these notebooks you will:
 
 The goal is **intuition**: by the end, participants should feel comfortable reading and modifying GPT-style model code rather than treating it as a black box.
 
-### Pico-GPT – pre-trained reference mini models
+### Pico-GPT – pre-trained reference implementations
 
 The **Pico-GPT** artifacts live in `Notebooks/Pico-GPT-Training/`:
 
@@ -38,11 +38,10 @@ The **Pico-GPT** artifacts live in `Notebooks/Pico-GPT-Training/`:
   - `sinhala_model_weights.pth`
   - `tamil_model_weights.pth`
 
-Pico-GPT models are slightly larger than the basic Atto-GPT models and are intended for:
+Pico-GPT implementations are slightly larger than the basic Atto-GPT implementations and are intended for:
 
 - Inspecting a more fully trained mini GPT in Sinhala and Tamil.  
-- Experimenting with sampling strategies (temperature, top-k / top-p) and prompt design.  
-- Comparing training curves, capacity, and sample quality vs. the smaller Atto-GPT models.
+- Comparing training curves, capacity, and sample quality vs. the smaller Atto-GPT implementations.
 
 These assets are **reference implementations**—they exist so you can poke at a working mini GPT without waiting for training to finish.
 
@@ -50,12 +49,12 @@ These assets are **reference implementations**—they exist so you can poke at a
 
 ```
 Notebooks/
-├── Atto-GPT-Training/          # Models built live during workshop
+├── Atto-GPT-Training/          # Implementations built live during workshop
 │   ├── Sinhala_gpt_dev.ipynb
 │   ├── Tamil_gpt_dev.ipynb
 │   ├── Sinhala_1_8m_gpt_dev.ipynb
 │   └── Tamil_1_8m_gpt_dev.ipynb
-├── Pico-GPT-Training/          # Pre-trained reference models
+├── Pico-GPT-Training/          # Pre-trained reference implementations
 │   ├── Sinhala_1_8m_gpt_dev.ipynb
 │   ├── Tamil_1_8m_gpt_dev.ipynb
 │   └── Saved_Model_Weights/
@@ -69,7 +68,7 @@ Notebooks/
 ### How to use this repository in the workshop
 
 - **Clone the repo and open the Atto-GPT notebooks** in Colab or a local Jupyter environment.  
-- **Follow the cells** to implement, train, and sample from tiny GPT-style models for Sinhala and Tamil.  
+- **Follow the cells** to implement, train, and sample from tiny GPT-style implementations for Sinhala and Tamil.  
 - Optionally, **explore the Pico-GPT notebooks and weights** to see how a slightly larger mini GPT behaves on the same languages.
 
 ### Credits and acknowledgments
@@ -79,7 +78,7 @@ The GPT implementation and training approach in this workshop is inspired by and
 - **"Let's build GPT: from scratch, in code, spelled out"** – [karpathy.ai/zero-to-hero](https://karpathy.ai/zero-to-hero.html)
 - The notebooks follow Karpathy's pedagogical style of building a GPT-style transformer from scratch, step by step, with clear explanations of each component.
 
-This workshop adapts those concepts to train tiny GPT models on **Sinhala and Tamil** text, making the transformer architecture accessible to participants working with these languages.
+This workshop adapts those concepts to build tiny GPT implementations on **Sinhala and Tamil** text, making the transformer architecture accessible to participants working with these languages.
 
 ### License and usage
 
