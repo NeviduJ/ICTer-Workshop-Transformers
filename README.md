@@ -13,8 +13,10 @@ Any text files in `Data/` are simply raw material to feed these models and are *
 
 The **Atto-GPT** notebooks live in `Notebooks/Atto-GPT-Training/`:
 
-- **`Sinhala_gpt_dev.ipynb`**
-- **`Tamil_gpt_dev.ipynb`**
+- **`Sinhala_gpt_dev.ipynb`** – Basic Atto-GPT implementation for Sinhala
+- **`Tamil_gpt_dev.ipynb`** – Basic Atto-GPT implementation for Tamil
+- **`Sinhala_1_8m_gpt_dev.ipynb`** – Larger 1.8M parameter version for Sinhala
+- **`Tamil_1_8m_gpt_dev.ipynb`** – Larger 1.8M parameter version for Tamil
 
 In these notebooks you will:
 
@@ -27,22 +29,42 @@ The goal is **intuition**: by the end, participants should feel comfortable read
 
 ### Pico-GPT – pre-trained reference mini models
 
-The **Pico-GPT** artifacts live in:
+The **Pico-GPT** artifacts live in `Notebooks/Pico-GPT-Training/`:
 
-- `Notebooks/DO NOT TOUCH/I SAID DON'T/LEAVE/RESTRICTED/Pico-GPT Training/`
+- **Training/dev notebooks**: 
+  - `Sinhala_1_8m_gpt_dev.ipynb`
+  - `Tamil_1_8m_gpt_dev.ipynb`
+- **Saved model weights** (in `Saved_Model_Weights/`):
+  - `sinhala_model_weights.pth`
+  - `tamil_model_weights.pth`
 
-This directory contains:
-
-- **Training/dev notebooks**: `Sinhala_1_8m_gpt_dev.ipynb`, `Tamil_1_8m_gpt_dev.ipynb`  
-- **Saved model weights**: `sinhala_model_weights.pth`, `tamil_model_weights.pth`
-
-Pico-GPT models are slightly larger than the Atto-GPT models and are intended for:
+Pico-GPT models are slightly larger than the basic Atto-GPT models and are intended for:
 
 - Inspecting a more fully trained mini GPT in Sinhala and Tamil.  
 - Experimenting with sampling strategies (temperature, top-k / top-p) and prompt design.  
 - Comparing training curves, capacity, and sample quality vs. the smaller Atto-GPT models.
 
-These assets are **read-only during the workshop**—they exist so you can poke at a working mini GPT without waiting for training to finish.
+These assets are **reference implementations**—they exist so you can poke at a working mini GPT without waiting for training to finish.
+
+### Repository structure
+
+```
+Notebooks/
+├── Atto-GPT-Training/          # Models built live during workshop
+│   ├── Sinhala_gpt_dev.ipynb
+│   ├── Tamil_gpt_dev.ipynb
+│   ├── Sinhala_1_8m_gpt_dev.ipynb
+│   └── Tamil_1_8m_gpt_dev.ipynb
+├── Pico-GPT-Training/          # Pre-trained reference models
+│   ├── Sinhala_1_8m_gpt_dev.ipynb
+│   ├── Tamil_1_8m_gpt_dev.ipynb
+│   └── Saved_Model_Weights/
+│       ├── sinhala_model_weights.pth
+│       └── tamil_model_weights.pth
+└── Data Preparation/          # Data preprocessing notebooks
+    ├── ICTer_Sinhala_Data_Prep.ipynb
+    └── ICTer_Tamil_Data_Prep.ipynb
+```
 
 ### How to use this repository in the workshop
 
